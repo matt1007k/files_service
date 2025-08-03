@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / compiled files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environment
+.venv/
+env/
+venv/
+*.egg-info/
+.Python
+pip-selfcheck.json
+
+# Dependencies
+# Pipenv
+Pipfile.lock # Recommended to include if using Pipenv for dependency management
+# Poetry
+poetry.lock # Recommended to include if using Poetry for dependency management
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+# For example, if you have a local test database:
+test_db.db
+
+# Environment variables
+.env
