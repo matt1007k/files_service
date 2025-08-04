@@ -21,10 +21,10 @@ async def register_user(user: CreateUserDto, db: db_dependency):
         user = user_service.create_user(user)
         print(f"User created: {user}")
         return {"message": "User registered successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
     except AppError as e:
         raise HTTPException(status_code=e.status_code, detail=e.message)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @users_router.post("/login", response_model=LoginResponse)
@@ -33,7 +33,7 @@ async def login_user(data: LoginDto, db: db_dependency):
 
     try:
         return auth_service.login(data)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
     except AppError as e:
         raise HTTPException(status_code=e.status_code, detail=e.message)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
